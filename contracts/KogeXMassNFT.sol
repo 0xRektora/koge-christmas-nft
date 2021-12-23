@@ -22,7 +22,7 @@ contract KogeXMassNFT is ERC721Enumerable, Ownable {
     }
 
     function mint() external returns (uint256) {
-        require(kogecoin.balanceOf(msg.sender) > (10**9) * 50 || vKogeKoge.balanceOf(msg.sender) > (10**9) * 20);
+        require(kogecoin.balanceOf(msg.sender) >= (10**9) * 50 || vKogeKoge.balanceOf(msg.sender) >= (10**9) * 20);
         tokenIds.increment();
         uint256 newItemId = tokenIds.current();
         _safeMint(msg.sender, newItemId);
