@@ -17,6 +17,10 @@ export const deploy = async (taskArgs: { noCompile: boolean }, hre: HardhatRunti
     Number(hre.network.config.chainId) === Number(process.env.CHAIN_ID) &&
     Number(hre.network.config.chainId) !== 1285
   ) {
-    await hre.run('verify', { network: 'mainnet', address: deployed.address });
+    await hre.run('verify', {
+      network: 'mainnet',
+      address: deployed.address,
+      constructorArgsParams: ['https://ipfs.io/ipfs/QmSKpS6krRcBenci869E5ryxYShgEoKekuZ2dCLhcvksUo'],
+    });
   }
 };
