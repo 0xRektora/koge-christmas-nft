@@ -9,4 +9,4 @@ task('accounts', 'Prints the list of accounts', async (taskArgs, hre) => {
   }
 });
 
-task('deploy', deploy);
+task('deploy-x', deploy);
