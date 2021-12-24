@@ -17,7 +17,7 @@ contract KogeXMassNFT is ERC721Enumerable, Ownable {
     IERC20 constant kogecoin = IERC20(0x13748d548D95D78a3c83fe3F32604B4796CFfa23);
     IERC20 constant vKogeKoge = IERC20(0x992Ae1912CE6b608E0c0d2BF66259ab1aE62A657);
 
-    uint256 constant endReward = 1640303999;
+    uint256 constant endReward = 1641013199;
 
     constructor(string memory __baseUri) ERC721('KogeXMass', 'KGXM') {
         baseUri = __baseUri;
